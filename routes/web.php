@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'SessionsController@login');
+Route::post('/', 'SessionsController@sigin');
+Route::get('/logout', 'SessionsController@destroy');
+Route::get('/register', 'SessionsController@create');
 
 Route::get('/api/inbound', 'InboundSmsController@receive');
