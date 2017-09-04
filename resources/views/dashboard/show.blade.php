@@ -204,7 +204,7 @@
 								</dl>
 							</div>
 							<div class="col-xs-6 col-lg-6">
-								<button type="button" class="btn btn-block btn-lg btn-primary">Create Message</button>
+								<a href="/messages/create" role="button" class="btn btn-block btn-lg btn-primary">Create Message</a>
 							</div>
 						</div>
 					</div>
