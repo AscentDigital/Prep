@@ -16,6 +16,9 @@ Route::post('/', 'SessionsController@sigin');
 Route::get('/logout', 'SessionsController@destroy');
 Route::get('/register', 'SessionsController@create');
 
-Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@show']);
+Route::get('/messages', 'MessagesController@show');
+Route::get('/messages/create', 'MessagesController@create');
+
+Route::get('/dashboard','DashboardController@show');
 
 Route::get('/api/inbound', 'InboundSmsController@receive');

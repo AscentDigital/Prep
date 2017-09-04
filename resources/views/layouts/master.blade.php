@@ -14,8 +14,8 @@
     <title>@if(isset($title)){{ $title }}@else PrepSms @endif</title>
 
     <!-- Icons -->
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/simple-line-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Main styles for this application -->
     <link href="/css/style.css" rel="stylesheet">
@@ -54,7 +54,7 @@
 
         <ul class="nav navbar-nav d-md-down-none">
             <li class="nav-item px-3">
-                <a class="nav-link" href="#">Dashboard</a>
+                <a class="nav-link" href="/dashboard">Dashboard</a>
             </li>
             <li class="nav-item px-3">
                 <a class="nav-link" href="#">Directory</a>
@@ -102,7 +102,7 @@
                         <a class="nav-link" href="#"><i class="fa fa-key"></i> Keywords </a>
                     </li>  
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-comments"></i> Messages </a>
+                        <a class="nav-link" href="/messages"><i class="fa fa-comments"></i> Messages </a>
                     </li>  
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-file-o"></i> Forms </a>
@@ -144,6 +144,7 @@
     <!-- GenesisUI main scripts -->
 
     <script src="/js/app.js"></script>
+    <script src="/js/views/main.js"></script>
 
     @yield('import')
     @yield('script')
