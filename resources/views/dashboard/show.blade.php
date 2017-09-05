@@ -218,39 +218,72 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>Tropical Depression Harvey Public Advisory: Tropical Depression Harvey Advisory Number  43
+								NWS National Hurricane Center Miami FL       AL092017
+								1000 PM CDT Wed Aug 30 2017
+								...FLOODING RAINS CONTINUE OVER EXTREME EASTERN TEXAS AND WESTERN
+								LOUISIANA...
+								...HEAVY RAINS EXPECTED TO SPREAD NORTHEASTWARD OVER THE MISSISSIPPI
+								AND TENNESSEE VALLEYS DURING THE NEXT DAY OR TWO Text 8383 for more information...
+								</td>
 								<td>233,400</td>
-								<td>08/22/2017 11:30AM</td> 
+								<td>08/24/2017 11:30AM</td> 
 							</tr>
 							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>Tropical Depression Harvey Advisory Number  43
+								NWS National Hurricane Center Miami FL       AL092017
+								1000 PM CDT Wed Aug 30 2017
+
+								...FLOODING RAINS CONTINUE OVER EXTREME EASTERN TEXAS AND WESTERN
+								LOUISIANA...
+								...HEAVY RAINS EXPECTED TO SPREAD NORTHEASTWARD OVER THE MISSISSIPPI
+								AND TENNESSEE VALLEYS DURING THE NEXT DAY OR TWO Text 8383 for more information
+								Text 8383 for more information...
+								</td>
 								<td>131,400</td>
-								<td>08/20/2017 11:30AM</td> 
+								<td>08/23/2017 11:30AM</td> 
 							</tr>
 							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde amet, perspiciatis, modi sunt. Please visit www.google.com.</td>
+								<td>Tropical Storm Harvey Intermediate Advisory Number 3A
+								NWS National Hurricane Center Miami FL       AL092017
+								200 AM AST Fri Aug 18 2017
+
+								...WEATHER DETERIORATING IN THE WINDWARD ISLANDS AS HARVEY
+								APPROACHES Text 8383 for more information...</td>
+								<td>11,200</td>
+								<td>08/19/2017 7:30AM</td> 
+							</tr>
+							<tr>
+								<td>Tropical Storm Harvey Intermediate Advisory Number 3A
+								NWS National Hurricane Center Miami FL       AL092017
+								200 AM AST Fri Aug 18 2017
+
+								...WEATHER DETERIORATING IN THE WINDWARD ISLANDS AS HARVEY
+								APPROACHES...
+								Text 8383 for more information...
+								</td>
+								<td>48,400</td>
+								<td>08/18/2017 1:20AM</td> 
+							</tr>
+							<tr>
+								<td>Potential Tropical Cyclone Nine Advisory Number   1...Corrected
+								NWS National Hurricane Center Miami FL       AL092017
+								1100 AM AST Thu Aug 17 2017
+
+								CORRECTED POSITION
+
+								...LOW PRESSURE AREA EAST OF THE LESSER ANTILLES EXPECTED TO BECOME
+								A TROPICAL CYCLONE LATER TODAY OR TONIGHT...
+
+								Text 8383 for more information...
+								</td>
 								<td>133,400</td>
 								<td>08/17/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>45,400</td>
-								<td>08/12/2017 2:41AM</td> 
-							</tr>
-							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>11,200</td>
-								<td>08/02/2017 7:30AM</td> 
-							</tr>
-							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>48,400</td>
-								<td>08/01/2017 1:20AM</td> 
 							</tr>
 						</tbody>
 					</table>
 					<div class="card-body">
-						<button type="button" class="btn btn-block btn-primary">View All Mesages</button>
+						<a href ="/messages/" class="btn btn-block btn-primary">View All Mesages</a>
 					</div>
 					<div class="card-footer text-muted">
 						You have sent a total of 5 messages to 450,00 recipients for this month.
