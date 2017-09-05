@@ -53,53 +53,54 @@
 							<tr>
 								<th width="50%"><i class="fa fa-commenting-o"></i> <b>Messages</b></th>
 								<th><i class="fa fa-paper-plane-o"></i> Sender</th>
-								<th><i class="fa fa-inbox"></i> Recipient</th>
 								<th><i class="fa fa-users"></i> Campaign</th>
 								<th class="text-right"><i class="fa fa-calendar"></i> Date Sent</th> 
+								<th><i class="fa fa-inbox"></i> Show List</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
 								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
 								<td>08/22/2017 11:30AM</td> 
+								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
+							</tr>
+							
+							<tr>
+								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td><abbr title="+123456780">PrEPSMS</abbr></td>
+								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
+								<td>08/22/2017 11:30AM</td> 
+								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
 							</tr>
 							<tr>
 								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
 								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
 								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde amet, perspiciatis, modi sunt. Please visit www.google.com.</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
+								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
 							</tr>
 							<tr>
 								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
 								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
 								<td>08/22/2017 11:30AM</td> 
+								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
 							</tr>
 							<tr>
 								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
 								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
 								<td>08/22/2017 11:30AM</td> 
+								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
 							</tr>
 							<tr>
 								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
 								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
 								<td>08/22/2017 11:30AM</td> 
+								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
 							</tr>
 						</tbody>
 					</table>
