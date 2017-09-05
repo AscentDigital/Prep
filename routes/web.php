@@ -28,6 +28,9 @@ Route::get('/campaign/create', 'CampaignsController@create');
 Route::get('/keyword', 'KeywordsController@show');
 Route::get('/keyword/create', 'KeywordsController@create');
 
+
+Route::get('/subscribers', 'SubscribersController@show');
+
 Route::get('/dashboard','DashboardController@show');
 
 Route::get('/api/inbound', 'InboundSmsController@receive');

@@ -93,7 +93,7 @@
                         <a class="nav-link {{ Route::currentRouteName() == "dashboard" ? 'active' : '' }}" href="/"><i class="icon-speedometer"></i> Dashboard </a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-people"></i> Subscribers </a>
+                        <a class="nav-link" href="/subscribers"><i class="icon-people"></i> Subscribers </a>
                     </li> 
                     <li class="nav-item">
                         <a class="nav-link" href="/campaign"><i class="fa fa-file-text"></i> Campaign </a>
