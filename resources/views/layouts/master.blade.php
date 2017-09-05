@@ -96,10 +96,13 @@
                         <a class="nav-link" href="#"><i class="icon-people"></i> Subscribers </a>
                     </li> 
                     <li class="nav-item">
+                        <a class="nav-link" href="/campaign"><i class="fa fa-file-text"></i> Campaign </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-inbox"></i> Inbox </a>
                     </li>  
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-key"></i> Keywords </a>
+                        <a class="nav-link" href="/keyword"><i class="fa fa-key"></i> Keywords </a>
                     </li>  
                     <li class="nav-item">
                         <a class="nav-link" href="/messages"><i class="fa fa-comments"></i> Messages </a>

@@ -10,6 +10,10 @@ class MessagesController extends Controller
     	$this->middleware('auth');
     }
 
+    public function smslist(){
+    	return view('messages.list', ['title' => 'Create Message']);
+    }
+
     public function show(){
     	return view('messages.show', ['title' => 'Messages']);
     }
@@ -17,4 +21,5 @@ class MessagesController extends Controller
     public function create(){
     	return view('messages.create', ['title' => 'Create Message']);
     }
+
 }

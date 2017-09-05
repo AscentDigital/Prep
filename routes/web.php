@@ -18,6 +18,15 @@ Route::get('/register', 'SessionsController@create');
 
 Route::get('/messages', 'MessagesController@show');
 Route::get('/messages/create', 'MessagesController@create');
+Route::get('/messages/list', 'MessagesController@smslist');
+
+
+Route::get('/campaign', 'CampaignsController@show');
+Route::get('/campaign/create', 'CampaignsController@create');
+
+
+Route::get('/keyword', 'KeywordsController@show');
+Route::get('/keyword/create', 'KeywordsController@create');
 
 Route::get('/dashboard','DashboardController@show');
 
