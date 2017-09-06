@@ -53,54 +53,98 @@
 							<tr>
 								<th width="50%"><i class="fa fa-commenting-o"></i> <b>Messages</b></th>
 								<th><i class="fa fa-paper-plane-o"></i> Sender</th>
+								<th><i class="fa fa-inbox"></i> Recipient</th>
 								<th><i class="fa fa-users"></i> Campaign</th>
 								<th class="text-right"><i class="fa fa-calendar"></i> Date Sent</th> 
-								<th><i class="fa fa-inbox"></i> Show List</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>Tropical Storm Harvey Intermediate Advisory Number 31A
+								NWS National Hurricane Center Miami FL       AL092017
+								100 AM CDT Mon Aug 28 2017
+
+								...LIFE-THREATENING FLOODING CONTINUES OVER SOUTHEASTERN TEXAS...
+								...DO NOT ATTEMPT TO TRAVEL IN THE AFFECTED AREAS IF YOU ARE IN
+								A SAFE PLACE AND DO NOT DRIVE INTO FLOODED ROADWAYS
+								Text INFO to 8383 for more information
+
+								</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
-							</tr>
-							
-							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
-							</tr>
-							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
+								<td><a href="/messages/list"> +1289303493 </a></td>
+								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
+								<td>08/28/2017 01:30AM</td> 
 							</tr>
 							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>ropical Storm Harvey Intermediate Advisory Number 27A
+								NWS National Hurricane Center Miami FL       AL092017
+								100 AM CDT Sun Aug 27 2017
+
+								...HARVEY SLOWLY WEAKENING AS IT MOVES LITTLE...
+								...CONTINUES TO PRODUCE EXTREMELY HEAVY RAINS...
+								Text INFO to 8383 for more information
+								</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
+								<td><a href="/messages/list"> +1289303493 </a></td>
+								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
+								<td>08/27/2017 3:30AM</td> 
 							</tr>
 							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>Hurricane Harvey Intermediate Advisory Number 23A
+								NWS National Hurricane Center Miami FL       AL092017
+								100 AM CDT Sat Aug 26 2017
+
+								...HARVEY MAKES A SECOND LANDFALL ON THE NORTHEASTERN SHORE OF
+								COPANO BAY...
+								Text INFO to 8383 for more information
+								</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
+								<td><a href="/messages/list"> +1289303493 </a></td>
+								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
+								<td>08/26/2017 10:30AM</td> 
 							</tr>
 							<tr>
-								<td>PrEP Advisory: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>Hurricane Harvey Intermediate Advisory Number 19A
+								NWS National Hurricane Center Miami FL       AL092017
+								100 AM CDT Fri Aug 25 2017
+
+								...DANGEROUS HURRICANE HARVEY STRENGTHENING...
+								...WINDS REACH 105 MPH...
+								Text INFO to 8383 for more information
+								</td>
 								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-								<td><a href="/messages/list" class = "btn btn-primary"> Show List </a></td>
+								<td><a href="/messages/list"> +1289303493 </a></td>
+								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
+								<td>08/25/2017 08:30PM</td> 
+							</tr>
+							<tr>
+								<td>Tropical Storm Harvey Intermediate Advisory Number 14A
+								NWS National Hurricane Center Miami FL       AL092017
+								100 AM CDT Thu Aug 24 2017
+
+								...AIR FORCE AND NOAA PLANES FIND HARVEY A LITTLE STRONGER...
+								Text INFO to 8383 for more information
+
+								</td>
+								<td><abbr title="+123456780">PrEPSMS</abbr></td>
+								<td><a href="/messages/list"> +1289303493 </a></td>
+								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
+								<td>08/24/2017 6:30AM</td> 
+							</tr>
+							<tr>
+								<td>Tropical Depression Harvey Advisory Number  12
+								NWS National Hurricane Center Miami FL       AL092017
+								1000 AM CDT Wed Aug 23 2017
+
+								...HARVEY REGENERATES INTO A TROPICAL DEPRESSION...
+								...HURRICANE AND STORM SURGE WATCHES ISSUED FOR PORTIONS OF THE
+								TEXAS COAST...
+								Text INFO to 8383 for more information
+								</td>
+								<td><abbr title="+123456780">PrEPSMS</abbr></td>
+								<td><a href="/messages/list"> +1289303493 </a></td>
+								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
+								<td>08/23/2017 2:00PM</td> 
 							</tr>
 						</tbody>
 					</table>
