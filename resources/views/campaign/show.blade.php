@@ -56,47 +56,13 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Prep Campaign</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>Storm Harvey Advisory</td>
+								<td>Storm Harvey Information , Location keeping track on the storm</td>
 								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
+								<td>08/21/2017 06:30AM</td>
+								<td>--/--/---- --:--</td> 
 							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
+							
 						</tbody>
 					</table>
 					<div class="card-body">
