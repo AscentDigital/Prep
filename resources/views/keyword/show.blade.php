@@ -26,14 +26,14 @@
 					<div class="preview">
 						<div class="row">
 							<div class="col-xs-6 col-lg-8">
-								<form action="" method="post" class="form-horizontal">
+								<form action="/keyword" method="GET" class="form-horizontal">
 									<div class="form-group row">
 										<div class="col-md-12">
 											<div class="input-group">
 												<span class="input-group-btn">
-													<button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+													<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
 												</span>
-												<input type="text" id="search-messages" name="search-messages" class="form-control" placeholder="Search campaigns...">
+												<input type="text" id="search-messages" name="s" class="form-control" placeholder="Search campaigns..." value="{{ Request::query('s') }}">
 											</div>
 										</div>
 									</div> 
@@ -50,39 +50,22 @@
 								<th>Keyword</b></th>
 								<th width="50%">Reply Message</th>
 								<th>Created by</th>
-								<th> Date Created</th>
-								<th class="text-right"> Last Update</th> 
+								<th class="text-right"> Date Created</th> 
 							</tr>
 						</thead>
 						<tbody>
+							@foreach($keywords as $keyword)
 							<tr>
-								<td>INFO</td>
-								<td>LOCATION 21.5N 92.5W
-								ABOUT 535 MI 860 KM SSE OF PORT OCONNOR TEXAS
-								ABOUT 470 MI 755 KM SE OF PORT MANSFIELD TEXAS
-								MAXIMUM SUSTAINED WINDS 35 MPH 55 KM/H.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>--/--/---- --:--</td> 
+								<td>{{ $keyword->keyword }}</td>
+								<td>{{ $keyword->reply }}</td>
+								<td>{{ $keyword->user->name }}</td>
+								<td>{{ $keyword->created_at->diffForHumans() }}</td>
 							</tr>
+							@endforeach
 						</tbody>
 					</table>
 					<div class="card-body">
-						<ul class="pagination">
-							<li class="page-item"><a class="page-link" href="#">Prev</a>
-							</li>
-							<li class="page-item active">
-								<a class="page-link" href="#">1</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">2</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">4</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
+						{{ $keywords->appends(Request::except('page'))->links('vendor.pagination.bootstrap-4') }}
 					</div>
 				</div>
 			</div>

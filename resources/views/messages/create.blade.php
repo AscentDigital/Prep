@@ -2,7 +2,7 @@
 
 @section('content')
 <ol class="breadcrumb">
-	<li class="breadcrumb-item"><a href="./messages.html">Messages</a></li>  
+	<li class="breadcrumb-item"><a href="/messages">Messages</a></li>  
 	<li class="breadcrumb-item">Create Message</li>  
 
 	<!-- Breadcrumb Menu-->
