@@ -47,7 +47,7 @@
 					<table class="table table-striped message-table">
 						<thead>
 							<tr>
-								<th>Title</b></th>
+								<th>Keyword</b></th>
 								<th>Code</b></th>
 								<th width="50%">Description</th>
 								<th>Created by</th>
@@ -57,52 +57,20 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Prep Campaign</td>
-								<td>BR1020032</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>INFO</td>
+								<td>8383</td>
+								<td>Storm Harvey Advisory Information.</td>
 								<td>John Doe</td>
 								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
+								<td>--/--/---- --:--</td> 
 							</tr>
 							<tr>
-								<td>Prep Campaign</td>
-								<td>BR1020032</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
+								<td>LOC</td>
+								<td>8383</td>
+								<td>Storm Harvey Location</td>
 								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>BR1020032</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>BR1020032</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>BR1020032</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td>Prep Campaign</td>
-								<td>BR1020032</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci tenetur doloribus vero. SEND YES to 3104 to subscribe.</td>
-								<td>John Doe</td>
-								<td>08/22/2017 11:30AM</td>
-								<td>08/22/2017 11:30AM</td> 
+								<td>08/25/2017 02:30AM</td>
+								<td>--/--/---- --:--</td> 
 							</tr>
 						</tbody>
 					</table>
