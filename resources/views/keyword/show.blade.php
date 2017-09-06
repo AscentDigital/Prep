@@ -48,8 +48,7 @@
 						<thead>
 							<tr>
 								<th>Keyword</b></th>
-								<th>Code</b></th>
-								<th width="50%">Description</th>
+								<th width="50%">Reply Message</th>
 								<th>Created by</th>
 								<th> Date Created</th>
 								<th class="text-right"> Last Update</th> 
@@ -58,18 +57,12 @@
 						<tbody>
 							<tr>
 								<td>INFO</td>
-								<td>8383</td>
-								<td>Storm Harvey Advisory Information.</td>
+								<td>LOCATION 21.5N 92.5W
+								ABOUT 535 MI 860 KM SSE OF PORT OCONNOR TEXAS
+								ABOUT 470 MI 755 KM SE OF PORT MANSFIELD TEXAS
+								MAXIMUM SUSTAINED WINDS 35 MPH 55 KM/H.</td>
 								<td>John Doe</td>
 								<td>08/22/2017 11:30AM</td>
-								<td>--/--/---- --:--</td> 
-							</tr>
-							<tr>
-								<td>LOC</td>
-								<td>8383</td>
-								<td>Storm Harvey Location</td>
-								<td>John Doe</td>
-								<td>08/25/2017 02:30AM</td>
 								<td>--/--/---- --:--</td> 
 							</tr>
 						</tbody>
