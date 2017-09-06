@@ -31,9 +31,6 @@ Route::post('/keyword/create', 'KeywordsController@store');
 
 Route::get('/subscribers', 'SubscribersController@show');
 
-
-Route::get('/subscribers', 'SubscribersController@show');
-
 Route::get('/dashboard','DashboardController@show');
 
 Route::get('/api/inbound', 'InboundSmsController@receive');
