@@ -34,11 +34,11 @@ class Kernel extends ConsoleKernel
                 $run = true;
             }
             if($run) {
-                $command = '/usr/bin/php -c ' . $path .'/php.ini ' . $path . '/artisan queue:listen --tries=3 > /dev/null & echo $!';
+                $command = 'php ' . $path . '/artisan queue:work > /dev/null & echo $!';
                 $number = exec($command);
                 file_put_contents($path . '/queue.pid', $number);
             }
-        })->name('monitor_queue_listener')->everyFiveMinutes();
+        })->name('monitor_queue_listener')->everyMinute();
     }
 
     /**
