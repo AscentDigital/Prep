@@ -7,6 +7,8 @@ use Nexmo\Laravel\Facade\Nexmo;
 use App\Company;
 use App\Subscriber;
 use App\Message;
+use Carbon\Carbon;
+use App\Jobs\RetrieveTextMessage;
 
 class InboundSmsController extends Controller
 {
@@ -52,18 +54,17 @@ class InboundSmsController extends Controller
 				    'text' => $keyword->reply
 				]);
 
-				sleep(5);
 				foreach ($result as $key => $value) {
-					$message = Nexmo::message()->search($value['message-id']);
-					Message::create([
-						'number' => $from,
-						'message' => $message->getBody(),
-						'price' => $value['message-price'],
-						'type' => 'outgoing',
-						'origin' => 'keyword',
-						'campaign_id' => $keyword->campaign_id,
-						'company_id' => $keyword->company_id
-					]);
+					$message = Message::create([
+			            'number' => $from,
+			            'price' => $value['message-price'],
+			            'type' => 'outgoing',
+			            'origin' => 'keyword',
+			            'campaign_id' => $keyword->campaign_id,
+			            'company_id' => $keyword->company_id
+			        ]);
+					$job = (new RetrieveTextMessage($message->id, $value['message-id']))->delay(Carbon::now()->addSeconds(5));
+					dispatch($job);
 				}
 			}
 		}
