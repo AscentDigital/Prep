@@ -34,7 +34,7 @@ class Kernel extends ConsoleKernel
                 $run = true;
             }
             if($run) {
-                $command = 'php ' . $path . '/artisan queue:work > /dev/null & echo $!';
+                $command = 'php-cli ' . $path . '/artisan queue:work > /dev/null & echo $!';
                 $number = exec($command);
                 file_put_contents($path . '/queue.pid', $number);
             }
