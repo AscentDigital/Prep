@@ -54,18 +54,20 @@ class InboundSmsController extends Controller
 				    'text' => $keyword->reply
 				]);
 
+				$price = 0;
 				foreach ($result as $key => $value) {
-					$message = Message::create([
-			            'number' => $from,
-			            'price' => $value['message-price'],
-			            'type' => 'outgoing',
-			            'origin' => 'keyword',
-			            'campaign_id' => $keyword->campaign_id,
-			            'company_id' => $keyword->company_id
-			        ]);
-					$job = (new RetrieveTextMessage($message->id, $value['message-id']))->delay(Carbon::now()->addSeconds(5));
-					dispatch($job);
+					$price = $price + $value['message-price'];
 				}
+
+				$message = Message::create([
+		            'number' => $from,
+		            'message' => $keyword->reply,
+		            'price' => $price,
+		            'type' => 'outgoing',
+		            'origin' => 'keyword',
+		            'campaign_id' => $keyword->campaign_id,
+		            'company_id' => $keyword->company_id
+		        ]);
 			}
 		}
     }
