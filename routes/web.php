@@ -23,6 +23,7 @@ Route::get('/messages/list', 'MessagesController@smslist');
 
 Route::get('/campaign', 'CampaignsController@show');
 Route::get('/campaign/create', 'CampaignsController@create');
+Route::post('/campaign/create', 'CampaignsController@store');
 
 Route::get('/keyword', 'KeywordsController@show');
 Route::get('/keyword/create', 'KeywordsController@create');

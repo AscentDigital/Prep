@@ -26,14 +26,14 @@
 					<div class="preview">
 						<div class="row">
 							<div class="col-xs-6 col-lg-8">
-								<form action="" method="post" class="form-horizontal">
+								<form action="/campaign" method="GET" class="form-horizontal">
 									<div class="form-group row">
 										<div class="col-md-12">
 											<div class="input-group">
 												<span class="input-group-btn">
-													<button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+													<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
 												</span>
-												<input type="text" id="search-messages" name="search-messages" class="form-control" placeholder="Search campaigns...">
+												<input type="text" id="search-messages" name="s" class="form-control" placeholder="Search campaigns..." value="{{ Request::query('s') }}">
 											</div>
 										</div>
 									</div> 
@@ -50,37 +50,22 @@
 								<th>Title</b></th>
 								<th width="50%">Description</th>
 								<th>Created by</th>
-								<th> Date Created</th>
-								<th class="text-right"> Last Update</th> 
+								<th class="text-right">Date Created</th>
 							</tr>
 						</thead>
 						<tbody>
+							@foreach($campaigns as $campaign)
 							<tr>
-								<td>Storm Harvey Advisory</td>
-								<td>Storm Harvey Information , Location keeping track on the storm</td>
-								<td>John Doe</td>
-								<td>08/21/2017 06:30AM</td>
-								<td>--/--/---- --:--</td> 
+								<td>{{ $campaign->title }}</td>
+								<td>{{ $campaign->description }}</td>
+								<td>{{ $campaign->user->name }}</td>
+								<td>{{ $campaign->created_at->diffForHumans() }}</td>
 							</tr>
-							
+							@endforeach
 						</tbody>
 					</table>
 					<div class="card-body">
-						<ul class="pagination">
-							<li class="page-item"><a class="page-link" href="#">Prev</a>
-							</li>
-							<li class="page-item active">
-								<a class="page-link" href="#">1</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">2</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">4</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
+						{{ $campaigns->appends(Request::except('page'))->links('vendor.pagination.bootstrap-4') }}
 					</div>
 				</div>
 			</div>
