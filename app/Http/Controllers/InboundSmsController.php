@@ -7,8 +7,6 @@ use Nexmo\Laravel\Facade\Nexmo;
 use App\Company;
 use App\Subscriber;
 use App\Message;
-use Carbon\Carbon;
-use App\Jobs\RetrieveTextMessage;
 
 class InboundSmsController extends Controller
 {
@@ -31,7 +29,8 @@ class InboundSmsController extends Controller
 					'misc' => json_encode($misc),
 					'type' => 'incoming',
 					'campaign_id' => $keywords->first()->campaign_id,
-					'company_id' => $keywords->first()->company_id
+					'company_id' => $keywords->first()->company_id,
+					'status' => 'received'
 				]);
 
 				$subscriber = Subscriber::where('number', $from)->first();
@@ -66,7 +65,8 @@ class InboundSmsController extends Controller
 		            'type' => 'outgoing',
 		            'origin' => 'keyword',
 		            'campaign_id' => $keyword->campaign_id,
-		            'company_id' => $keyword->company_id
+		            'company_id' => $keyword->company_id,
+		            'status' => 'sent'
 		        ]);
 			}
 		}

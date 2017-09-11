@@ -26,24 +26,24 @@
 					<div class="preview">
 						<div class="row">
 							<div class="col-xs-6 col-lg-8">
-								<form action="" method="post" class="form-horizontal">
+								<form action="/messages/{{ $message->id }}/logs" method="post" class="form-horizontal">
 									<div class="form-group row">
 										<div class="col-md-12">
 											<div class="input-group">
 												<span class="input-group-btn">
-													<button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+													<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
 												</span>
-												<input type="text" id="search-messages" name="search-messages" class="form-control" placeholder="Search...">
+												<input type="text" id="search-messages" name="s" class="form-control" placeholder="Search...">
 											</div>
 										</div>
 									</div> 
 								</form>
 							</div>
-							<div class="col-xs-6 col-lg-4"> 
+							<!-- <div class="col-xs-6 col-lg-4"> 
 								<select class="form-control" id="type">
 									<option>All</option>
 								</select>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<table class="table table-striped message-table">
@@ -56,55 +56,18 @@
 							</tr>
 						</thead>
 						<tbody>
+							@foreach($logs as $log)
 							<tr>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
+								<td><abbr title="{{ auth()->user()->company->code }}">PrEPSMS</abbr></td>
+								<td><a href="#">{{ $log->number }}</a></td>
+								<td><abbr title="{{ $message->campaign->description }}"><b>{{ $message->campaign->title }}</b></abbr></td>
+								<td>{{ $log->created_at->diffForHumans() }}</td> 
 							</tr>
-							
-							<tr>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
-							<tr>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="#">+100-3018-203</a></td>
-								<td><abbr title="HIV Awareness long title put them here"><b>HIV Awareness</b></abbr></td>
-								<td>08/22/2017 11:30AM</td> 
-							</tr>
+							@endforeach
 						</tbody>
 					</table>
 					<div class="card-body">
-						<ul class="pagination">
-							<li class="page-item"><a class="page-link" href="#">Prev</a>
-							</li>
-							<li class="page-item active">
-								<a class="page-link" href="#">1</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">2</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">4</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
+						{{ $logs->appends(Request::except('page'))->links('vendor.pagination.bootstrap-4') }}
 					</div>
 					<div class="card-footer text-muted">
 						You have sent a total of 5 messages to 450,00 recipients for this month.

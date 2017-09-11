@@ -26,26 +26,26 @@
 					<div class="preview">
 						<div class="row">
 							<div class="col-xs-6 col-lg-8">
-								<form action="" method="post" class="form-horizontal">
+								<form action="/messages" method="GET" class="form-horizontal">
 									<div class="form-group row">
 										<div class="col-md-12">
 											<div class="input-group">
 												<span class="input-group-btn">
-													<button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+													<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
 												</span>
-												<input type="text" id="search-messages" name="search-messages" class="form-control" placeholder="Search messages...">
+												<input type="text" id="search-messages" name="s" class="form-control" placeholder="Search messages..." value="{{ Request::query('s') }}">
 											</div>
 										</div>
 									</div> 
-								</form>
 							</div>
 							<div class="col-xs-6 col-lg-4"> 
-								<select class="form-control" id="type">
-									<option>All</option>
-									<option>Outgoing</option> 
-									<option>Incoming</option> 
+								<select class="form-control" id="type" name="filter">
+									<option value>All</option>
+									<option value="outgoing" @if(Request::query('filter') == 'outgoing') selected @endif>Outgoing</option> 
+									<option value="incoming" @if(Request::query('filter') == 'incoming') selected @endif>Incoming</option> 
 								</select>
 							</div>
+							</form>
 						</div>
 					</div>
 					<table class="table table-striped message-table">
@@ -59,111 +59,30 @@
 							</tr>
 						</thead>
 						<tbody>
+							@foreach($messages as $message)
 							<tr>
-								<td>Tropical Storm Harvey Intermediate Advisory Number 31A
-								NWS National Hurricane Center Miami FL       AL092017
-								100 AM CDT Mon Aug 28 2017
-
-								...LIFE-THREATENING FLOODING CONTINUES OVER SOUTHEASTERN TEXAS...
-								...DO NOT ATTEMPT TO TRAVEL IN THE AFFECTED AREAS IF YOU ARE IN
-								A SAFE PLACE AND DO NOT DRIVE INTO FLOODED ROADWAYS
-								Text INFO to 8383 for more information
-
+								<td>{{ $message->message }}</td>
+								<td>{{ $message->getSender() }}</td>
+								<td>
+									@if($message->number == null)
+									<a href="/messages/{{ $message->id }}/logs"> {{ $message->getTotalLogs() }} </a>
+									@else
+									{{ $message->getRecipient() }}
+									@endif
 								</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="/messages/list"> +1289303493 </a></td>
-								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
-								<td>08/28/2017 01:30AM</td> 
+								<td><abbr title="{{ $message->company->code }}"><b>{{ $message->campaign->title }}</b></abbr></td>
+								<td>{{ $message->created_at->diffForHumans() }}</td> 
 							</tr>
+							@endforeach
+							@if($messages->count() == 0)
 							<tr>
-								<td>ropical Storm Harvey Intermediate Advisory Number 27A
-								NWS National Hurricane Center Miami FL       AL092017
-								100 AM CDT Sun Aug 27 2017
-
-								...HARVEY SLOWLY WEAKENING AS IT MOVES LITTLE...
-								...CONTINUES TO PRODUCE EXTREMELY HEAVY RAINS...
-								Text INFO to 8383 for more information
-								</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="/messages/list"> +1289303493 </a></td>
-								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
-								<td>08/27/2017 3:30AM</td> 
+								<td colspan="5" class="text-left">No messages found.</td>
 							</tr>
-							<tr>
-								<td>Hurricane Harvey Intermediate Advisory Number 23A
-								NWS National Hurricane Center Miami FL       AL092017
-								100 AM CDT Sat Aug 26 2017
-
-								...HARVEY MAKES A SECOND LANDFALL ON THE NORTHEASTERN SHORE OF
-								COPANO BAY...
-								Text INFO to 8383 for more information
-								</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="/messages/list"> +1289303493 </a></td>
-								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
-								<td>08/26/2017 10:30AM</td> 
-							</tr>
-							<tr>
-								<td>Hurricane Harvey Intermediate Advisory Number 19A
-								NWS National Hurricane Center Miami FL       AL092017
-								100 AM CDT Fri Aug 25 2017
-
-								...DANGEROUS HURRICANE HARVEY STRENGTHENING...
-								...WINDS REACH 105 MPH...
-								Text INFO to 8383 for more information
-								</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="/messages/list"> +1289303493 </a></td>
-								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
-								<td>08/25/2017 08:30PM</td> 
-							</tr>
-							<tr>
-								<td>Tropical Storm Harvey Intermediate Advisory Number 14A
-								NWS National Hurricane Center Miami FL       AL092017
-								100 AM CDT Thu Aug 24 2017
-
-								...AIR FORCE AND NOAA PLANES FIND HARVEY A LITTLE STRONGER...
-								Text INFO to 8383 for more information
-
-								</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="/messages/list"> +1289303493 </a></td>
-								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
-								<td>08/24/2017 6:30AM</td> 
-							</tr>
-							<tr>
-								<td>Tropical Depression Harvey Advisory Number  12
-								NWS National Hurricane Center Miami FL       AL092017
-								1000 AM CDT Wed Aug 23 2017
-
-								...HARVEY REGENERATES INTO A TROPICAL DEPRESSION...
-								...HURRICANE AND STORM SURGE WATCHES ISSUED FOR PORTIONS OF THE
-								TEXAS COAST...
-								Text INFO to 8383 for more information
-								</td>
-								<td><abbr title="+123456780">PrEPSMS</abbr></td>
-								<td><a href="/messages/list"> +1289303493 </a></td>
-								<td><abbr title="+123456780"><b>Storm Harvey Advisory</b></abbr></td>
-								<td>08/23/2017 2:00PM</td> 
-							</tr>
+							@endif
 						</tbody>
 					</table>
 					<div class="card-body">
-						<ul class="pagination">
-							<li class="page-item"><a class="page-link" href="#">Prev</a>
-							</li>
-							<li class="page-item active">
-								<a class="page-link" href="#">1</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">2</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">4</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
+						{{ $messages->appends(Request::except('page'))->links('vendor.pagination.bootstrap-4') }}
 					</div>
 					<div class="card-footer text-muted">
 						You have sent a total of 5 messages to 450,00 recipients for this month.

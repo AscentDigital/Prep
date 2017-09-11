@@ -18,7 +18,8 @@ Route::get('/register', 'SessionsController@create');
 
 Route::get('/messages', 'MessagesController@show');
 Route::get('/messages/create', 'MessagesController@create');
-Route::get('/messages/list', 'MessagesController@smslist');
+Route::post('/messages/create', 'MessagesController@store');
+Route::get('/messages/{message}/logs', 'MessagesController@smslist');
 
 
 Route::get('/campaign', 'CampaignsController@show');
