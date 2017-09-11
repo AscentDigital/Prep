@@ -26,7 +26,7 @@
 					<div class="preview">
 						<div class="row">
 							<div class="col-xs-6 col-lg-8">
-								<form action="/messages/{{ $message->id }}/logs" method="post" class="form-horizontal">
+								<form action="/messages/{{ $message->id }}/logs" method="GET" class="form-horizontal">
 									<div class="form-group row">
 										<div class="col-md-12">
 											<div class="input-group">
