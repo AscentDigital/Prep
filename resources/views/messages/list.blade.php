@@ -33,7 +33,7 @@
 												<span class="input-group-btn">
 													<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
 												</span>
-												<input type="text" id="search-messages" name="s" class="form-control" placeholder="Search...">
+												<input type="text" id="search-messages" name="s" class="form-control" placeholder="Search..." value="{{ Request::query('s') }}">
 											</div>
 										</div>
 									</div> 
