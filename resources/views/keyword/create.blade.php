@@ -32,7 +32,7 @@
 							<label class="col-md-3 form-control-label lead" for="campaign-select"><b><i class="fa fa-flag"></i> Campaign</b></label>
 							<div class="col-md-9">
 								<select id="select" name="campaign_id" class="form-control">
-									<option disabled selected value style="display:none">Please select</option>
+									<option disabled selected value style="display:none">Please select a campaign</option>
 									@foreach($campaigns as $campaign)
 									<option value="{{ $campaign->id }}" @if($campaign->id == old('campaign_id')) selected @endif>{{ $campaign->title }}</option>
 									@endforeach

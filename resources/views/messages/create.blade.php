@@ -18,8 +18,11 @@
 
 <div class="container-fluid"> 
 	<div class="animated fadeIn">
+	<form action="/messages/create" method="POST">
+	{{ csrf_field() }}
 		<div class="row">
 			<div class="col-md-7"> 
+			@include('layouts.partials.alerts')
 				<div class="card message-card message-send">
 					<div class="card-header bg-primary">
 						<i class="fa fa-envelope"></i> Create Message
@@ -28,11 +31,11 @@
 						<div class="form-group row">
 							<label class="col-md-3 form-control-label lead" for="campaign-select"><b><i class="fa fa-flag"></i> Campaign</b></label>
 							<div class="col-md-9">
-								<select id="select" name="campaign-select" class="form-control">
-									<option value="0">Please select</option>
-									<option value="1">Option #1</option>
-									<option value="2">Option #2</option>
-									<option value="3">Option #3</option>
+								<select id="select" name="campaign_id" class="form-control">
+									<option disabled selected value style="display:none">Please select a campaign</option>
+									@foreach($campaigns as $campaign)
+									<option value="{{ $campaign->id }}" @if($campaign->id == old('campaign_id')) selected @endif>{{ $campaign->title }}</option>
+									@endforeach
 								</select>
 							</div>
 						</div>  
@@ -61,7 +64,7 @@
 								</div>
 								<div class="col-md-3 text-right">
 									<div class="form-group"> 
-										<select class="form-control border-primary" id="subscibers-type">
+										<select class="form-control border-primary" id="subscibers-type" style="display:none;">
 											<option value="0">List</option>
 											<option value="1">Subscribers</option> 
 										</select>
@@ -89,38 +92,10 @@
 										<tbody>
 											<tr data-trigger="sub-list-1">
 												<td>
-													<input type="checkbox" id="checkbox1" name="sub-list-1" value="sub-list-1">  
+													<input type="checkbox" id="checkbox1" name="recipients[]" value="default" checked>  
 												</td> 
-												<td>August subscribers</td> 
-												<td>31,400</td> 
-											</tr>
-											<tr data-trigger="sub-list-2">
-												<td>
-													<input type="checkbox" id="checkbox1" name="sub-list-2" value="sub-list-2">  
-												</td> 
-												<td>August subscribers</td> 
-												<td>31,400</td> 
-											</tr>
-											<tr data-trigger="sub-list-3">
-												<td>
-													<input type="checkbox" id="checkbox1" name="sub-list-3" value="sub-list-3">  
-												</td> 
-												<td>August subscribers</td> 
-												<td>31,400</td> 
-											</tr>
-											<tr data-trigger="sub-list-4">
-												<td>
-													<input type="checkbox" id="checkbox1" name="sub-list-4" value="sub-list-4">  
-												</td> 
-												<td>August subscribers</td> 
-												<td>31,400</td> 
-											</tr>
-											<tr data-trigger="sub-list-5">
-												<td>
-													<input type="checkbox" id="checkbox1" name="sub-list-5" value="sub-list-5">  
-												</td> 
-												<td>August subscribers</td> 
-												<td>31,400</td> 
+												<td>Default</td> 
+												<td>{{ $company->subscribers()->count() }}</td> 
 											</tr>
 										</table>
 									</div>
@@ -199,9 +174,9 @@
 								<div class="form-group row"> 
 									<label class="col-md-3 form-control-label lead" for="campaign-select"><b><i class="fa fa-calendar"></i> Scheduling</b></label>
 									<div class="col-md-9">
-										<select id="select" name="campaign-select" class="form-control">
-											<option value="0">Send Immediately</option>
-											<option value="1">Schedule for Later</option> 
+										<select id="select" name="scheduling" class="form-control">
+											<option value="send_now">Send Immediately</option>
+											<option value="send_later">Schedule for Later</option> 
 										</select>
 									</div>
 								</div>  
@@ -221,8 +196,9 @@
 									<div class="col-lg-6">
 										<div class="card">
 											<div class="card-body">
-												<p class="lead text-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rerum non a provident soluta eius magnam natus, dolores mollitia molestias nemo sint repellat, laudantium numquam expedita adipisci reiciendis! Iure, repellendus!</p>
+												<p class="lead text-preview"></p>
 											</div>
+											<textarea style="display:none;" name="message" id="hidden-message"></textarea>
 										</div> 
 									</div>
 								</div>
@@ -231,7 +207,7 @@
 										<div class="input-group input-group-lg"> 
 											<input type="text" id="input3-group2" name="input3-group2" class="form-control" placeholder="Click send message to confirm" disabled="">
 											<span class="input-group-btn">
-												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmSend"><i class="fa fa-send-o"></i> Send Message
+												<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#confirmSend"><i class="fa fa-send-o"></i> Send Message
 												</button>
 											</span>
 										</div>
@@ -240,7 +216,7 @@
 							</div>
 						</div>
 						<!--  -->
-						<div class="modal fade" id="confirmSend" tabindex="-1" role="dialog" aria-labelledby="confirmSendLabel" aria-hidden="true">
+						<!-- <div class="modal fade" id="confirmSend" tabindex="-1" role="dialog" aria-labelledby="confirmSendLabel" aria-hidden="true">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
 									<div class="modal-header">
@@ -258,7 +234,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!--  -->
 						<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
 							Launch demo modal
@@ -267,6 +243,7 @@
 
 					</div>
 				</div>
+				</form>
 
 
 				<!--/.row-->
@@ -288,12 +265,13 @@
             var body = $('#message').val();
             var head = $('.header-input').val();
             var total = head.length + body.length; 
-            var stringTxt = head + body;
+            var stringTxt = head + ' ' + body;
             if(total > 160){
                 $('.counting-text').addClass('text-danger');
             }else{
                 $('.counting-text').removeClass('text-danger');
             }
+            $('#hidden-message').val(stringTxt);
             $('.text-preview').text(stringTxt);
             $('.counting-text').text(total);
         } 
@@ -325,7 +303,7 @@
                 $('.header-title b').show().text(title);
                 $('.header-notice').hide(); 
             });
-            $('.header-input, #message').on('keypress blur',function(){
+            $('.header-input, #message').on('keyup blur',function(){
                 countingText();
             });
         });
