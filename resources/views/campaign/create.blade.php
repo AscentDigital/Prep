@@ -20,11 +20,14 @@
 	<div class="animated fadeIn">
 		<div class="row">
 			<div class="col-md-8"> 
+			@include('layouts.partials.alerts')
 				<div class="card message-card message-send">
 					<div class="card-header bg-primary">
 						<i class="fa fa-envelope"></i> Create Campaign
 							</div>
-							<div class="preview"> 
+							<form method = "post" action = "/campaign/create">
+							{{ csrf_field() }}
+							<div class="card-body"> 
 								<div class="form-group row">
 									<label class="col-md-3 form-control-label lead" for="campaign-select"><b><i class="fa fa-flag"></i> Title</b></label>
 									<div class="col-md-9">
@@ -35,8 +38,13 @@
 									<label class="form-control-label lead" for="campaign-select"><b><i class="fa fa-bars"></i> Description</b></label>
 										<textarea name = "description" class ="form-control"></textarea>
 								</div>  
-								<button type = "submit" class = "btn btn-primary pull-right">Create Campaign</button>
-							</div> 
+							</div>
+							<div class="preview"> 
+								<div class="form-group">
+									<button type = "submit" class = "btn btn-primary">Create Campaign</button>
+								</div>
+							</div>
+							</form>
 						</div>
 					</div>
 				</div>
