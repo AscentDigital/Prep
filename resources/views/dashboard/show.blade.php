@@ -19,7 +19,7 @@
 	<div class="animated fadeIn">
 		<div class="row">
 			<div class="col-lg-4 col-md-12 col-sm-12">
-				<div class="card text-white bg-primary" style="height: 340px;">
+				<div class="card text-white bg-primary" style="height: 300px;">
 					<div class="card-body pb-0">
 						<div class="btn-group float-right">
 							<button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -34,7 +34,7 @@
 						<h4 class="mb-0">823 <i class="fa fa-caret-up text-success"></i></h4>
 						<p>Subscribers since Last Week</p>
 					</div>
-					<div class="chart-wrapper px-3" style="height:230px;">
+					<div class="chart-wrapper px-3" style="height:200px;">
 						<canvas id="card-chart1" class="chart" height="70"></canvas>
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 			<div class="col-lg-8 col-md-12">
 				<div class="row">
 					<div class="col-lg-4 col-sm-6">
-						<div class="card text-white bg-info">
+						<div class="card text-white bg-info" style="height: 300px;">
 							<div class="card-body pb-0">
 								<div class="btn-group float-right">
 									<button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,13 +57,13 @@
 								<h4 class="mb-0">35,020 <i class="fa fa-caret-down text-danger"></i> </h4>
 								<p>SMS Sent to Subscribers since Last Week</p>
 							</div>
-							<div class="chart-wrapper px-3" style="height:70px;">
+							<div class="chart-wrapper px-3" style="height:200px;">
 								<canvas id="card-chart2" class="chart" height="70"></canvas>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-sm-6">
-						<div class="card text-white bg-warning">
+						<div class="card text-white bg-warning" style="height: 300px;">
 							<div class="card-body pb-0">
 								<div class="btn-group float-right">
 									<button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,13 +78,13 @@
 								<h4 class="mb-0">1,230 <small>(clicks) </small><i class="fa fa-caret-up text-success"></i></h4>
 								<p>Social Interactions</p>
 							</div>
-							<div class="chart-wrapper" style="height:70px;">
+							<div class="chart-wrapper px-3" style="height:200px;">
 								<canvas id="card-chart3" class="chart" height="70"></canvas>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-sm-6">
-						<div class="card text-white bg-secondary">
+						<div class="card text-white bg-secondary" style="height: 300px;">
 							<div class="card-body pb-0">
 								<div class="btn-group float-right">
 									<button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -99,7 +99,7 @@
 								<h4 class="mb-0">1,823 <i class="fa fa-caret-down text-danger"></i></h4>
 								<p>SMS Received (2-way SMS Replies)</p>
 							</div>
-							<div class="chart-wrapper px-3" style="height:70px;">
+							<div class="chart-wrapper px-3" style="height:200px;">
 								<canvas id="card-chart4" class="chart" height="70"></canvas>
 							</div>
 						</div>
