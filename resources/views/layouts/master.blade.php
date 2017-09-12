@@ -61,9 +61,9 @@
             </li> 
         </ul>
         <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item d-md-down-none">
+            <!--<li class="nav-item d-md-down-none">
                 <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
-            </li>  
+            </li>-->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img src="/img/ava/boy-16.png" class="img-avatar" alt="admin">
@@ -98,21 +98,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/campaign"><i class="fa fa-file-text"></i> Campaign </a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-inbox"></i> Inbox </a>
-                    </li>  
+                    </li> -->  
                     <li class="nav-item">
                         <a class="nav-link" href="/keyword"><i class="fa fa-key"></i> Keywords </a>
                     </li>  
                     <li class="nav-item">
                         <a class="nav-link" href="/messages"><i class="fa fa-comments"></i> Messages </a>
                     </li>  
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-file-o"></i> Forms </a>
-                    </li>  
-                    <li class="nav-item">
+                    </li> -->  
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-phone"></i> Longcodes </a>
-                    </li>   
+                    </li> -->   
                 </ul>
             </nav>
         </div>
