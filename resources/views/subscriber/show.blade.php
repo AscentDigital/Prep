@@ -26,14 +26,14 @@
 					<div class="preview">
 						<div class="row">
 							<div class="col-xs-6 col-lg-8">
-								<form action="" method="post" class="form-horizontal">
+								<form action="/subscribers" method="GET" class="form-horizontal">
 									<div class="form-group row">
 										<div class="col-md-12">
 											<div class="input-group">
 												<span class="input-group-btn">
-													<button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+													<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
 												</span>
-												<input type="text" id="search-messages" name="search-messages" class="form-control" placeholder="Search campaigns...">
+												<input type="text" id="search-messages" name="s" class="form-control" placeholder="Search campaigns..." value="{{ Request::query('s') }}">
 											</div>
 										</div>
 									</div> 
@@ -50,70 +50,17 @@
 							</tr>
 						</thead>
 						<tbody>
+							@foreach($subscribers as $subscriber)
 							<tr>
-								<td>+1920292933</td>
+								<td>+{{ $subscriber->number }}</td>
 								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
+								<td>{{ $subscriber->created_at->diffForHumans() }}</td>
 							</tr>
-							
-							<tr>
-								<td>+1920292933</td>
-								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
-							</tr>
-							<tr>
-								<td>+1920292933</td>
-								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
-							</tr>
-							<tr>
-								<td>+1920292933</td>
-								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
-							</tr>
-							<tr>
-								<td>+1920292933</td>
-								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
-							</tr>
-							<tr>
-								<td>+1920292933</td>
-								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
-							</tr>
-							<tr>
-								<td>+1920292933</td>
-								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
-							</tr>
-							<tr>
-								<td>+1920292933</td>
-								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
-							</tr>
-							<tr>
-								<td>+1920292933</td>
-								<td>Default</td>
-								<td>08/22/2017 11:30AM</td>
-							</tr>
+							@endforeach
 						</tbody>
 					</table>
-					<div class="card-body">
-						<ul class="pagination">
-							<li class="page-item"><a class="page-link" href="#">Prev</a>
-							</li>
-							<li class="page-item active">
-								<a class="page-link" href="#">1</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">2</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">4</a>
-							</li>
-							<li class="page-item"><a class="page-link" href="#">Next</a>
-							</li>
-						</ul>
+					<div class="card-body">	
+						{{ $subscribers->appends(Request::except('page'))->links('vendor.pagination.bootstrap-4') }}		
 					</div>
 				</div>
 			</div>
