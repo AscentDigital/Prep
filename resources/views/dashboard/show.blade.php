@@ -104,6 +104,7 @@
 							</div>
 						</div>
 					</div>
+					<!--/.social-box
 					<div class="col-sm-6 col-lg-3">
 						<div class="social-box facebook">
 							<i class="fa fa-facebook"></i>
@@ -139,12 +140,8 @@
 								</li>
 							</ul>
 						</div>
-						<!--/.social-box-->
 					</div>
-					<!--/.col-->
-
 					<div class="col-sm-6 col-lg-3">
-
 						<div class="social-box linkedin">
 							<i class="fa fa-linkedin"></i>
 							<div class="chart-wrapper">
@@ -161,7 +158,6 @@
 								</li>
 							</ul>
 						</div>
-						<!--/.social-box-->
 					</div>
 					<div class="col-sm-6 col-lg-3">
 						<div class="social-box google-plus">
@@ -180,8 +176,7 @@
 								</li>
 							</ul>
 						</div>
-						<!--/.social-box-->
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
