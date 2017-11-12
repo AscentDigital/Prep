@@ -19,6 +19,8 @@
 
     <!-- Main styles for this application -->
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/style-extended.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
 </head>
 
 <!-- BODY options, add following classes to body to change options
@@ -49,7 +51,7 @@
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden footer-fixed">
     <header class="app-header navbar">
         <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">☰</button>
-        <a class="navbar-brand" href="#"></a>
+        <a href="#"><h2 style = "font-weight:900;margin-left:10px;">emitifo</h2></a>
         <button class="navbar-toggler sidebar-minimizer d-md-down-none" type="button">☰</button>
 
         <ul class="nav navbar-nav d-md-down-none">
